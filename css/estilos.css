@@ -1,0 +1,143 @@
+@font-face {
+    font-family: "Courgette";
+    src: url("..//fuentes/Courgette/Courgette-Regular.ttf");
+    font-weight: bolder;
+    
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Courgette";
+
+}
+.header{
+    background-image: url(../assets/imagenes/fondo.png);
+    display: flex;
+    align-items: center;
+    min-height: 25vh;
+    padding: 30px 0;
+    
+}
+
+.menu{
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 10px auto;
+    list-style: none;
+
+}
+.menu .logo img {
+    margin-top: 20px;
+    width: 50%;
+}
+.menu .nav{
+    padding-top: 20px;
+}
+.menu .nav ul li{
+    
+    list-style: none;
+    position: relative;
+    float: left;
+}
+.menu .nav ul li a{
+    font-size: 2rem;
+    font-weight: bolder;
+    text-decoration: none;
+    padding: 20px;
+    color: rgb(231, 0, 165);
+    display: block;
+}
+#menu{
+    display: none;
+}
+.menu-icono{
+    width: 25px;
+}
+.menu label{
+    cursor: pointer;
+    display: none;
+}
+.sub-menu{
+    position: relative;
+}
+.sub-menu #carrito {
+    display: none;
+}
+
+.sub-menu:hover #carrito{
+    display: block;
+    position: absolute;
+    right: 0;
+    backdrop-filter: blur(10px);
+    top: 180%;
+    z-index: 1;
+    background-color: rgba(47, 45, 45, 0.308);
+    width: 25rem;
+    height: 500rem;
+    min-height: auto;
+}
+table{
+    width: 100%;
+}
+th, td{
+    color: white;
+}
+.borra{
+    background-color: black;
+    border-radius: 50%;
+    padding: 5px 10px;
+}
+
+@media (max-width:991px) {
+    .header{
+        min-height: 20vh;
+    }
+    .menu{
+        padding: 20px;
+    }
+    .menu label{
+        display: initial;
+
+    }
+    .menu .nav{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        display: none;
+        
+    }
+    .menu .nav ul li{
+        width: 100%;
+    }
+    .menu .nav ul li a{
+        padding: 2px;
+    }
+    #menu:checked ~ .nav {
+        display: initial;
+        background-color: rgba(204, 144, 47, 0.812);
+
+    }
+
+    .menu .logo{
+        position: absolute;
+        bottom: 0%;
+        left: 40%;
+    }
+    
+    .sub-menu:hover #carrito{
+        min-width: 100%;
+    }
+
+}
+

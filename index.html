@@ -4,8 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simulacro de Compra</title>
+    <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
+    <header class="header">
+        <div class="menu">
+                <a href="index.html" class="logo"><img src="assets/imagenes/logo.png" alt="logo pasteleria"></a>
+                <input type="checkbox" id="menu">
+                <label for="menu">
+                    <img src="assets/imagenes/menu-icono.png" alt="icono de menu" class="icono-menu">
+                </label>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="">Productos</a></li>
+                        <li><a href="">Contactos</a></li>
+                    </ul>
+                </nav>
+            
+            <div>
+                <ul class="sub-menu">
+                    
+                    <img src="assets/imagenes/carro-de-lcompras.svg" id="carrito-img" alt="carritos de compras">
+                    <div id="carrito">
+                        <table id="lista-carrito">
+                            <thead>
+                                <tr>
+                                    <th>Imagen</th>
+                                    <th>Nombre</th>
+                                    <th>Precio</th>
+                                    <th></th>
+                                </tr>
+                                <tbody></tbody>
+                            </thead>
+                            <button type="submit" id="vaciar-carrito" class="boton-vaciar-carrito"> Vaciar Carrito</button>
+                            
+                            
+                        </table>
+                    </div>
+                </ul>
+            </div>
+        </div>
+        
+
+    </header>
     <script src="js/micodigo.js"></script>
 </body>
 </html>
