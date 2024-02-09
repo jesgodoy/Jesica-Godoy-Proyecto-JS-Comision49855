@@ -140,4 +140,61 @@ th, td{
     }
 
 }
+main{
+    display: flex;
+}
+main .aside{
+    flex: 0 0 300px;
+    padding: 1rem;
+    background-color: rgba(204, 144, 47, 0.812);
+}
+main .seccion{
+    flex: 1 1 auto;
+    margin: 1rem;
+}
+h1{
+    margin: 25px;
+    text-align: center;
+    font-size: 3rem;
+    color: rgb(231, 0, 165);
+}
+p{
+    margin: 25px;
+    text-align: center;
+    font-size: 1.5rem;
+    color: #8e0047;
+}
 
+/* productos */
+.contenedor-productos{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.card {
+    box-shadow: 0 5px 9px 0 #8e0047;
+    max-width: 300px;
+    margin: 10px;
+    
+}
+.card img {
+    width: 150px;
+    height: 30vh;
+    padding: 20px;
+    
+    
+}
+.titulo-producto{
+    padding: 10px;
+    text-align: center;
+   
+}
+.precio-producto{
+    padding: 10px;
+    text-align: center;
+}
+.boton-comprar{
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+}
