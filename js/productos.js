@@ -95,9 +95,11 @@ const productos = [
 ];
 
 //uso JSON convertir mi array de objetos en una cadena de texto
-let stringProductos = JSON.stringify(productos);
+let productosJSON = JSON.stringify(productos);
 //almaceno la variable stringProductos para amacenarlo en el localStorade
-localStorage.setItem(`productos`, stringProductos);
+localStorage.setItem(`productos`, productosJSON);
+
+
 
 //creo objetos atravez de una funcion constructorasa
 const SanValentin =  function(id, nombre, precio, img){
@@ -133,11 +135,16 @@ const productosFebrero = listaProductos.map(producto =>{
     }
 });
 
+const productosFebreroJSON= JSON.stringify(productosFebrero);
+
+localStorage.setItem(`prosuctosFebero`, productosFebreroJSON)
+
+/*
 //traer por Id el contenedor creado en html
 let contenedoProductos = document.getElementById("contenedor-productos");
 let contenedorFiltros = document.getElementById("contenedor-filtros")
 // variable carrito 
-let carrito = [];
+
 
 
 productosFebrero.forEach((producto)=>{
@@ -155,6 +162,7 @@ productosFebrero.forEach((producto)=>{
         `;
 
     contenedoProductos.append(contenido); 
+    
     const botonComprar = contenido.querySelector(".boton-comprar");
     botonComprar.addEventListener("click", ()=>{
         carrito.push({
@@ -165,31 +173,10 @@ productosFebrero.forEach((producto)=>{
         })
         console.log(carrito)
     } )
-    
 });
-/*
-let contenidoDeFiltros = document.createElement("div");
-contenidoDeFiltros.className = "filtros";
-contenidoDeFiltros.innerHTML =`
-<h3>Precio</h3>
-<>
-    <li> <input type="checkbox" class"filtro precio1">De $0 a $10.000</li>
-    <li> <input type="checkbox" class"filtro precio2">De $10.000 a $15.000</li>
-    <li> <input type="checkbox" class"filtro precio3">De $15.000 a $20.000</li>
-     <input type="checkbox" class"filtro precio4">Mayor $20.000</li>
 
 
-`;
 
-/*
-//trae por Id el contenedor creado en html
-const verCarrito = document.getElementById("carrito")
-verCarrito.addEventListener("click", () => {
-    const contenidoCarrito = document.createElement("div")
-    verCarrito.className "ver-carrito"
-    verCarrito.innerHTML =`
-        
-    `
-})*/
+*/
 
 

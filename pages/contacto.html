@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+    <header class="header">
+        <div class="menu">
+                <a href="../index.html" class="logo"><img src="../assets/imagenes/logo.png" alt="logo pasteleria"></a>
+                <input type="checkbox" id="menu">
+                <label for="menu">
+                    <img src="../assets/imagenes/menu-icono.png" alt="icono de menu" class="icono-menu">
+                </label>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="../index.html">Inicio</a></li>
+                        <li><a href="productos.html">Productos</a></li>
+                        <li><a href="contacto.html">Contactos</a></li>
+                    </ul>
+                </nav>
+            
+            <div>
+                <div class="sub-menu">
+                    
+                    <img src="../assets/imagenes/carro-de-lcompras.svg" id="carrito-Icono" alt="carritos de compras">
+                    <div class="carrito">
+                        <h2>Tu Carrito</h2>
+                        <img id="borra- carrito" src="../assets/boton-x.png" alt="">
+                        
+                        <div class="contenido-carrito">
+
+                        </div>
+                        <div class="total">
+                            <h3>Total</h3>
+                            <h3>$</h3>
+                        </div>
+                        <button type="button">Comprar</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div>
+            <form id="formulario-contacto">
+                <label for="nombre">Nombre</label>
+                <input type="text" name="nombre" id="nombre" placeholder="Nombre y apellido">
+                <label for="telefono">Telefono</label>
+                <input type="tel" name="telefono" id="telefono" placeholder="Nombre y apellido">
+                <label for="mail">E-mail</label>
+                <input type="email" name="mail" id="mail" placeholder="Nombre y apellido">
+                <label for="mensaje">Mensaje</label>
+                <input type="text" name="mensaje" id="mensaje" placeholder="Escribe aqui tu mensaje">
+                <button type="submit" id="boton-enviar">Enviar</button>
+            </form>
+        </div>
+        
+        
+        
+    </main> 
+    <script src="../js/micodigo.js"></script>
+</body>
+</html>

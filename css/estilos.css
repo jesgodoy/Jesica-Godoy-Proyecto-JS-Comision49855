@@ -67,36 +67,9 @@ body{
     cursor: pointer;
     display: none;
 }
-.sub-menu{
-    position: relative;
-}
-.sub-menu #carrito {
-    display: none;
-}
 
-.sub-menu:hover #carrito{
-    display: block;
-    position: absolute;
-    right: 0;
-    backdrop-filter: blur(10px);
-    top: 180%;
-    z-index: 1;
-    background-color: rgba(47, 45, 45, 0.308);
-    width: 25rem;
-    height: 500rem;
-    min-height: auto;
-}
-table{
-    width: 100%;
-}
-th, td{
-    color: white;
-}
-.borra{
-    background-color: black;
-    border-radius: 50%;
-    padding: 5px 10px;
-}
+
+
 
 @media (max-width:991px) {
     .header{
@@ -135,23 +108,14 @@ th, td{
         left: 40%;
     }
     
-    .sub-menu:hover #carrito{
-        min-width: 100%;
-    }
+    
+}
 
-}
-main{
-    display: flex;
-}
-main .aside{
-    flex: 0 0 300px;
-    padding: 1rem;
-    background-color: rgba(204, 144, 47, 0.812);
-}
-main .seccion{
-    flex: 1 1 auto;
-    margin: 1rem;
-}
+
+
+
+
+
 h1{
     margin: 25px;
     text-align: center;
@@ -164,6 +128,64 @@ p{
     font-size: 1.5rem;
     color: #8e0047;
 }
+.lista-productos{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap:  25px;
+    row-gap: 25px;
+    margin-top: 100px;
+
+}
+
+.contenido-carriro{
+    position: fixed;
+    top: 0;
+    left: 100%;
+    width: 500px;
+    background-color: rgb(204, 47, 186);
+    height: 100vh;
+    transition: 0.5;
+
+}
+.contenido-carriro .cerrar{
+    display: flex;
+}
+.contenido-carriro .cerrar h2{
+    padding-top: 30px;
+    padding-left: 30px;
+    text-align: center;
+    font-size: 2rem;
+    
+} 
+.contenido-carriro .cerrar .cerrar-carrito{
+    position:  relative;
+    left: 40%;
+    font-size: 1.5rem;
+    padding: 20px;
+    background-color: #8e0047;
+}
+.contenido-carriro .total-compra{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: #8e0047;
+    font-size: 1.5rem;
+    padding: 30px;
+    cursor: pointer;
+}
+
+.precio-total{
+    text-align: end;
+}
+
+.activar .contenido-carriro{
+    left: calc(100% - 500px);
+} 
+.activar .contenedor{
+    transform: translateX(-200px)
+}
+
+
+
 
 /* productos */
 .contenedor-productos{
@@ -171,13 +193,13 @@ p{
     justify-content: space-around;
     flex-wrap: wrap;
 }
-.card {
+.tarjeta-producto {
     box-shadow: 0 5px 9px 0 #8e0047;
     max-width: 300px;
     margin: 10px;
     
 }
-.card img {
+.tarjeta-producto img {
     width: 150px;
     height: 30vh;
     padding: 20px;
