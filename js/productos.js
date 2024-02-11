@@ -1,117 +1,127 @@
-
-
 const productos = [
     {
         id: 1,
         nombre: "Brownie Clasico", 
         precio: 10000,
-        img: "../assets/imagenes/productos/brownie-clasico.jpg"
+        img: "../assets/imagenes/productos/brownie-clasico.jpg",
+        cantidad: 1
     },
     {
         id: 2,
         nombre: "Brownie Frambuesa", 
         precio: 14000,
-        img: "../assets/imagenes/productos/brownie-frutilla.jpg"
+        img: "../assets/imagenes/productos/brownie-frutilla.jpg",
+        cantidad: 1
     },
     {
         id: 3,
         nombre: "Brownie Mix Frutos ",      
         precio: 15000,
-        img: "../assets/imagenes/productos/brownie-frutosrojos.jpg"
+        img: "../assets/imagenes/productos/brownie-frutosrojos.jpg",
+        cantidad: 1
     },
     {
         id: 4,
         nombre: "Brownie Moka", 
         precio: 11000,
-        img: "../assets/imagenes/productos/brownie-moka.jpg"
+        img: "../assets/imagenes/productos/brownie-moka.jpg",
+        cantidad: 1
     },
     {
         id: 5,
         nombre: "Brownie Oreo", 
         precio: 15000,
-        img: "../assets/imagenes/productos/brownie-oreo.jpg"
+        img: "../assets/imagenes/productos/brownie-oreo.jpg",
+        cantidad: 1
     },
     {
         id: 6,
         nombre: "Chocooreo", 
         precio: 17000,
-        img: "../assets/imagenes/productos/chocoreo.jpg"
+        img: "../assets/imagenes/productos/chocoreo.jpg",
+        cantidad: 1
     },
         
     {
         id: 7,
         nombre: "Chocotorta", 
         precio: 18300,
-        img: "../assets/imagenes/productos/choco-torta.jpg"
+        img: "../assets/imagenes/productos/choco-torta.jpg",
+        cantidad: 1
     },
     {
         id: 8,
         nombre: "Lemon Pie", 
         precio: 10800,
-        img: "../assets/imagenes/productos/lemon-pie.jpg"
+        img: "../assets/imagenes/productos/lemon-pie.jpg",
+        cantidad: 1
     },
     {
         id: 9,
         nombre: "Tiramisú", 
         precio: 9000,
-        img: "../assets/imagenes/productos/tiramisu.jpg"
+        img: "../assets/imagenes/productos/tiramisu.jpg",
+        cantidad: 1
     },
     {
         id: 10,
         nombre: "Rogel", 
         precio: 8000,
-        img: "../assets/imagenes/productos/rogel.jpg"
+        img: "../assets/imagenes/productos/rogel.jpg",
+        cantidad: 1
     },
     {
         id: 11,
         nombre: "Tarta Frutos del bosque", 
         precio: 10000,
-        img: "../assets/imagenes/productos/tarta-frutos-rojos.jpg"
+        img: "../assets/imagenes/productos/tarta-frutos-rojos.jpg",
+        cantidad: 1
     },
     {
         id: 12,
         nombre: "Cupcakes", 
         precio: 510,
-        img: "../assets/imagenes/productos/cupcakes.jpg"
+        img: "../assets/imagenes/productos/cupcakes.jpg",
+        cantidad: 1
     },
     {
         id: 13,
         nombre:"Shot Dulce", 
         precio: 1210,
-        img: "../assets/imagenes/productos/shot-dulce.jpg"
+        img: "../assets/imagenes/productos/shot-dulce.jpg",
+        cantidad: 1
     },
     {
         id: 14,
         nombre:"Torta de Vainilla", 
         precio: 8510,
-        img: "../assets/imagenes/productos/torta-vainilla.jpg"
+        img: "../assets/imagenes/productos/torta-vainilla.jpg",
+        cantidad: 1
     },
     {
         id: 15,
         nombre:"Torta de Chocolate", 
         precio: 10600,
-        img: "../assets/imagenes/productos/torta-chocolate.jpg"
+        img: "../assets/imagenes/productos/torta-chocolate.jpg",
+        cantidad: 1
     },
 ];
 
-//uso JSON convertir mi array de objetos en una cadena de texto
-let productosJSON = JSON.stringify(productos);
-//almaceno la variable stringProductos para amacenarlo en el localStorade
-localStorage.setItem(`productos`, productosJSON);
+let productosJSON = JSON.stringify(productos)
 
-
+localStorage.setItem("datos", productosJSON)
 
 //creo objetos atravez de una funcion constructorasa
-const SanValentin =  function(id, nombre, precio, img){
+const SanValentin =  function(id, nombre, precio, img, cantidad){
     this.id = id
     this.nombre = nombre
     this.precio= precio
     this.img = img
 };
-let sanValentin1 = new SanValentin (16, "Box Love", 15000 ,"../assets/imagenes/productos/box-sanvalentin.jpg");
-let sanValentin2 = new SanValentin (17, "Brownie LOVE", 21200, "../assets/imagenes/productos/brownie-love.jpg");
-let sanValentin3 = new SanValentin (18, "Cupcakes de Amor", 700, "../assets/imagenes/productos/cupcakes-love.jpg");
-let sanValentin4 = new SanValentin (19, "Torta Corazón", 15500, "../assets/imagenes/productos/torta-corazon.jpg");
+let sanValentin1 = new SanValentin (16, "Box Love", 15000 ,"../assets/imagenes/productos/box-sanvalentin.jpg", 1);
+let sanValentin2 = new SanValentin (17, "Brownie LOVE", 21200, "../assets/imagenes/productos/brownie-love.jpg", 1);
+let sanValentin3 = new SanValentin (18, "Cupcakes de Amor", 700, "../assets/imagenes/productos/cupcakes-love.jpg", 1);
+let sanValentin4 = new SanValentin (19, "Torta Corazón", 15500, "../assets/imagenes/productos/torta-corazon.jpg", 1);
 
 //convierto en array los objeros creados
 let  productoSanValentin = [sanValentin1, sanValentin2, sanValentin3, sanValentin4];
@@ -134,49 +144,3 @@ const productosFebrero = listaProductos.map(producto =>{
         return producto
     }
 });
-
-const productosFebreroJSON= JSON.stringify(productosFebrero);
-
-localStorage.setItem(`prosuctosFebero`, productosFebreroJSON)
-
-/*
-//traer por Id el contenedor creado en html
-let contenedoProductos = document.getElementById("contenedor-productos");
-let contenedorFiltros = document.getElementById("contenedor-filtros")
-// variable carrito 
-
-
-
-productosFebrero.forEach((producto)=>{
-    //creo variable para crear un div  a travez de javascript
-    let contenido = document.createElement("div");
-
-    //le doy una clase al div creado
-    contenido.className = "card"
-    
-    contenido.innerHTML = `
-        <img class="imagen-porducto" src ="${producto.img}">
-        <h3 class="titulo-producto">${producto.nombre}</h3>
-        <h3 class="precio-producto">$ ${producto.precio}</h3>
-        <button class = "boton-comprar" >Comprar</button>
-        `;
-
-    contenedoProductos.append(contenido); 
-    
-    const botonComprar = contenido.querySelector(".boton-comprar");
-    botonComprar.addEventListener("click", ()=>{
-        carrito.push({
-            nombre: producto.nombre,
-            img: producto.img,
-            precio: producto.precio
-
-        })
-        console.log(carrito)
-    } )
-});
-
-
-
-*/
-
-

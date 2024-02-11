@@ -128,95 +128,74 @@ p{
     font-size: 1.5rem;
     color: #8e0047;
 }
-.lista-productos{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    column-gap:  25px;
-    row-gap: 25px;
-    margin-top: 100px;
 
+.contenedor-carrito{
+    position: relative;
+    left: 45%;
+    width: 50%;
+    background-color: rgb(231, 0, 165);
 }
 
-.contenido-carriro{
-    position: fixed;
-    top: 0;
-    left: 100%;
-    width: 500px;
-    background-color: rgb(204, 47, 186);
-    height: 100vh;
-    transition: 0.5;
-
-}
-.contenido-carriro .cerrar{
+.contenedor-carrito .carrito-header{
     display: flex;
+    justify-content: center;
 }
-.contenido-carriro .cerrar h2{
+.contenido-carrito .carrito-header h2{
     padding-top: 30px;
     padding-left: 30px;
     text-align: center;
     font-size: 2rem;
     
 } 
-.contenido-carriro .cerrar .cerrar-carrito{
+.contenedor-carrito .carrito-header .cerrar-carrito{
     position:  relative;
     left: 40%;
     font-size: 1.5rem;
-    padding: 20px;
+    padding: 10px;
     background-color: #8e0047;
-}
-.contenido-carriro .total-compra{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    background-color: #8e0047;
-    font-size: 1.5rem;
-    padding: 30px;
     cursor: pointer;
 }
-
-.precio-total{
-    text-align: end;
+.contenedor-carrito .carrito-contenido{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
 }
-
-.activar .contenido-carriro{
-    left: calc(100% - 500px);
-} 
-.activar .contenedor{
-    transform: translateX(-200px)
+.eliminar-carrito{
+    width: 20%;
 }
-
-
 
 
 /* productos */
 .contenedor-productos{
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    margin: 50px;
 }
-.tarjeta-producto {
-    box-shadow: 0 5px 9px 0 #8e0047;
-    max-width: 300px;
-    margin: 10px;
+.tarjetas-productos {
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  
+    
     
 }
-.tarjeta-producto img {
+.tarjetas-productos img {
+    background-color: #c36895;
+    margin-top: 30px;
     width: 150px;
     height: 30vh;
-    padding: 20px;
-    
-    
 }
-.titulo-producto{
+
+.tarjetas-productos button{
+    border: none;
+    outline: 0;
     padding: 10px;
+    color: #f5047c;
+    background-color: black;
     text-align: center;
-   
+    width: 50%;
+    font-size: 1.3rem;
+    cursor: pointer;
+    font-size: 1.3rem;
 }
-.precio-producto{
-    padding: 10px;
-    text-align: center;
-}
-.boton-comprar{
-    display: flex;
-    justify-content: center;
-    margin: 5px;
+.tarjetas-productos button:hover{
+    color: black;
+    background-color: #8e0047;
 }
