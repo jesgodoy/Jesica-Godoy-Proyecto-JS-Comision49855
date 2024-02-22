@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul{
+    display: flex;
+    list-style: none;
+    margin: 3px;
+}
+li{
+    margin: 15px;
+}
+.botones-filtro{
+    padding: 50px;
+    background-color: palevioletred;
+}
+.contenedor-productos{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 2rem;
+}
+
+.card-img-top{
+    
+    height: 50vh;
+}
+.img-body{
+    background-color: rgb(240, 185, 118);
+}
+.card-body{
+    background-color: rgb(240, 185, 118);;
+}
