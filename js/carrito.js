@@ -3,9 +3,10 @@ const iconoCarrito = document.getElementById("icono-carrito")
 
 
 
-const abrirCarrito = ()=> {
+function abrirCarrito () {
     
     let contenidoModal = ``
+    let totalCompra = carrito.reduce((total,producto)=> total + (producto.precio * producto.cantidad), 0)
         carrito.forEach((producto)=>{
                 contenidoModal +=`
                 <div class="contenido-modal">
@@ -19,20 +20,28 @@ const abrirCarrito = ()=> {
                     <span class="cantidad">${producto.cantidad}</span>
                     <button class="boton-modal boton-sumar"><i class="fa-solid fa-plus" style="color: #c700b6;"></i></button>
                     </div>
-                    <div >${producto.precio * producto.cantidad}</div>
+                    <div>$${producto.precio * producto.cantidad}</div>
                     <button class="boton-modal boton-eliminar"><i class=" fa-solid fa-trash-can" style="color: #c700b6;"></i></button>
                 </div>
-
+               
+                
                `
 
         })
         
+        contenidoModal += `
+        <div>
+        <h3>Total de tu compra es </h3>
+        <h3> ${totalCompra}</h3>
+        </div>
+        `
+        
         if(carrito.length === 0){
             contenidoModal = `<h3>Tu carrito esta vacio</h3>`
-        }
-    
-        
-        
+        } 
+
+
+
     Swal.fire({
         title:'Tu Carrito',
         width: 800,
@@ -55,61 +64,51 @@ const abrirCarrito = ()=> {
     eliminar.forEach((elimina)=>{
         elimina.addEventListener("click", eliminarProducto)
     })
-  
     
-}
-iconoCarrito.addEventListener("click", abrirCarrito)
 
-
-function restarCantidad(event) {
-    const productoDiv = event.target.closest('.contenido-modal');
-    const nombreProducto = productoDiv.querySelector('div').textContent;
-
-    // Encontrar el producto en el carrito
-    const producto = carrito.find(item => item.nombre === nombreProducto);
-    if (producto && producto.cantidad > 1) {
-        producto.cantidad--;
-        abrirCarrito();
-    }
 }
 
-function sumarCantidad(event) {
-    const productoDiv = event.target.closest('.contenido-modal');
-    const nombreProducto = productoDiv.querySelector('div').textContent;
 
-    // Encontrar el producto en el carrito
-    const producto = carrito.find(item => item.nombre === nombreProducto);
-    if (producto) {
-        producto.cantidad++;
-        abrirCarrito();
-    }
-}
 
-function eliminarProducto(event) {
-    const productoDiv = event.target.closest('.contenido-modal');
-    const nombreProducto = productoDiv.querySelector('div').textContent;
 
-    // Encontrar el índice del producto en el carrito
-    const index = carrito.findIndex(item => item.nombre === nombreProducto);
-    if (index !== -1) {
-        carrito.splice(index, 1);
-        abrirCarrito();
-    }
-}
-/*
+
 //cree las funciones para ver si funciona
-function restarCantidad(){
+function restarCantidad(e){
+    const productoEnCarrito = e.target.closest('.contenido-modal').querySelector('div').textContent
+    const index =carrito.find(x => x.nombre === productoEnCarrito )
     
+    index && index.cantidad > 1 ? index.cantidad-- :  carrito.splice(index, 1)
+    
+    abrirCarrito()
+    guardarCarrito()
+    cargarCarrito()
 }
-function sumarCantidad(){
+
+function sumarCantidad(e){
     
-    
+    const productoEnCarrito = e.target.closest('.contenido-modal').querySelector('div').textContent
+    const index =carrito.find(x => x.nombre === productoEnCarrito )
+    index && index.cantidad++
+        abrirCarrito()
+        guardarCarrito()
+    cargarCarrito()
+
 }
 
 
-function eliminarProducto(id){
-    const idAgregadoCarrito = carrito.findIndex((x)=>x.id === id)
-    console.log(idAgregadoCarrit)
-    
+function eliminarProducto(e){
+    const productoEnCarrito = e.target.closest('.contenido-modal').querySelector('div').textContent
+    const index =carrito.findIndex (x => x.nombre === productoEnCarrito )
+    //en vez de usar if use operadores avanzados
+    index !==-1 && carrito.splice(index, 1)
+    abrirCarrito()
+    guardarCarrito()
+    cargarCarrito()
 }
-*/
+
+document.addEventListener('DOMContentLoaded', ()=>{
+    cargarCarrito()
+})
+
+
+iconoCarrito.addEventListener("click", abrirCarrito)

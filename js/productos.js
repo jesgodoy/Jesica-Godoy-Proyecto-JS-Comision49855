@@ -6,6 +6,7 @@ const productos = [
         img: "../assets/imagenes/productos/brownie-clasico.jpg",
         cantidad: 1,
         categoria: "brownie",
+        seccion: "general"
     },
     {
         id: 2,
@@ -14,6 +15,7 @@ const productos = [
         img: "../assets/imagenes/productos/brownie-frutilla.jpg",
         cantidad: 1,
         categoria: "brownie",
+        seccion: "general"
     },
     {
         id: 3,
@@ -22,6 +24,7 @@ const productos = [
         img: "../assets/imagenes/productos/brownie-frutosrojos.jpg",
         cantidad: 1,
         categoria: "brownie",
+        seccion: "general"
     },
     {
         id: 4,
@@ -30,6 +33,7 @@ const productos = [
         img: "../assets/imagenes/productos/brownie-moka.jpg",
         cantidad: 1,
         categoria: "brownie",
+        seccion: "general"
     },
     {
         id: 5,
@@ -38,6 +42,7 @@ const productos = [
         img: "../assets/imagenes/productos/brownie-oreo.jpg",
         cantidad: 1,
         categoria: "brownie",
+        seccion: "general"
     },
     {
         id: 6,
@@ -46,6 +51,7 @@ const productos = [
         img: "../assets/imagenes/productos/chocoreo.jpg",
         cantidad: 1,
         categoria: "torta",
+        seccion: "general"
     },
         
     {
@@ -55,6 +61,7 @@ const productos = [
         img: "../assets/imagenes/productos/choco-torta.jpg",
         cantidad: 1,
         categoria: "torta",
+        seccion: "general"
     },
     {
         id: 8,
@@ -63,6 +70,7 @@ const productos = [
         img: "../assets/imagenes/productos/lemon-pie.jpg",
         cantidad: 1,
         categoria: "tartas",
+        seccion: "general"
     },
     {
         id: 9,
@@ -71,6 +79,7 @@ const productos = [
         img: "../assets/imagenes/productos/tiramisu.jpg",
         cantidad: 1,
         categoria: "tartas",
+        seccion: "general"
     },
     {
         id: 10,
@@ -79,6 +88,7 @@ const productos = [
         img: "../assets/imagenes/productos/rogel.jpg",
         cantidad: 1,
         categoria: "tartas",
+        seccion: "general"
     },
     {
         id: 11,
@@ -87,6 +97,7 @@ const productos = [
         img: "../assets/imagenes/productos/tarta-frutos-rojos.jpg",
         cantidad: 1,
         categoria: "tartas",
+        seccion: "general"
     },
     {
         id: 12,
@@ -95,6 +106,7 @@ const productos = [
         img: "../assets/imagenes/productos/cupcakes.jpg",
         cantidad: 1,
         categoria: "bocaditos y postres",
+        seccion: "general"
     },
     {
         id: 13,
@@ -103,6 +115,7 @@ const productos = [
         img: "../assets/imagenes/productos/shot-dulce.jpg",
         cantidad: 1,
         categoria: "bocaditos y postres",
+        seccion: "general"
     },
     {
         id: 14,
@@ -111,6 +124,7 @@ const productos = [
         img: "../assets/imagenes/productos/torta-vainilla.jpg",
         cantidad: 1,
         categoria: "torta",
+        seccion: "general"
     },
     {
         id: 15,
@@ -119,22 +133,24 @@ const productos = [
         img: "../assets/imagenes/productos/torta-chocolate.jpg",
         cantidad: 1,
         categoria: "torta",
+        seccion: "general"
     },
 ];
 
 //creo objetos atravez de una funcion constructorasa
-const SanValentin =  function(id, nombre, precio, img, cantidad, categoria){
+const SanValentin =  function(id, nombre, precio, img, cantidad, categoria, seccion,){
     this.id = id
     this.nombre = nombre
     this.precio= precio
     this.img = img
     this.cantidad = cantidad
     this.categoria = categoria
+    this.seccion = seccion
 };
-let sanValentin1 = new SanValentin (16, "Box Love", 15000 ,"../assets/imagenes/productos/box-sanvalentin.jpg", 1, "bocaditos y postres" );
-let sanValentin2 = new SanValentin (17, "Brownie LOVE", 21200, "../assets/imagenes/productos/brownie-love.jpg", 1, "brownie");
-let sanValentin3 = new SanValentin (18, "Cupcakes de Amor", 700, "../assets/imagenes/productos/cupcakes-love.jpg", 1, "bocaditos y postres");
-let sanValentin4 = new SanValentin (19, "Torta Corazón", 15500, "../assets/imagenes/productos/torta-corazon.jpg", 1, "torta");
+let sanValentin1 = new SanValentin (16, "Box Love", 15000 ,"../assets/imagenes/productos/box-sanvalentin.jpg", 1, "bocaditos y postres", "sanvalentin" );
+let sanValentin2 = new SanValentin (17, "Brownie LOVE", 21200, "../assets/imagenes/productos/brownie-love.jpg", 1, "brownie", "sanvalentin");
+let sanValentin3 = new SanValentin (18, "Cupcakes de Amor", 700, "../assets/imagenes/productos/cupcakes-love.jpg", 1, "bocaditos y postres", "sanvalentin");
+let sanValentin4 = new SanValentin (19, "Torta Corazón", 15500, "../assets/imagenes/productos/torta-corazon.jpg", 1, "torta", "sanvalentin");
 
 //convierto en array los objeros creados
 let  productoSanValentin = [sanValentin1, sanValentin2, sanValentin3, sanValentin4];
@@ -154,6 +170,7 @@ const productosFebrero = listaProductos.map((producto) =>{
             img: producto.img,
             cantidad: producto.cantidad,
             categoria: producto.categoria,
+            seccion: producto.seccion
         }
     }else{
         return producto

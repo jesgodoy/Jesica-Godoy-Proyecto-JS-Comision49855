@@ -1,6 +1,8 @@
+
 const contenedorProductos = document.getElementById("contenedor-productos")
 const botonesFiltro = document.querySelectorAll(".botones-filtro")
 let botonesComprar 
+
 
 
 function cargarProducto(filtro){
@@ -61,7 +63,16 @@ function comprar(){
 
 }
 let carrito=[]
+function guardarCarrito(){
+    localStorage.setItem("carrito", JSON.stringify(carrito))
+}
 
+function cargarCarrito(){
+    const carritoLS = JSON.parse(localStorage.getItem("carrito"))
+    if(carritoLS){
+        carrito =carritoLS
+    }
+}
 function cargarProductoAlCarrito(e){
     
     Swal.fire({
@@ -93,6 +104,8 @@ function cargarProductoAlCarrito(e){
             cantidad: productoAgregadoAlCarrito.cantidad,
             img: productoAgregadoAlCarrito.img,
     })
+    guardarCarrito()
+    cargarCarrito()
 }
     console.log(carrito)
 }
