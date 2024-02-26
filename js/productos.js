@@ -128,6 +128,7 @@ const SanValentin =  function(id, nombre, precio, img, cantidad, categoria){
     this.nombre = nombre
     this.precio= precio
     this.img = img
+    this.cantidad = cantidad
     this.categoria = categoria
 };
 let sanValentin1 = new SanValentin (16, "Box Love", 15000 ,"../assets/imagenes/productos/box-sanvalentin.jpg", 1, "bocaditos y postres" );
@@ -144,7 +145,7 @@ const listaProductos = productos.concat(productoSanValentin);
 //  creo una copia de array original "listadeproductos" para hacer descuento para productos < $12000 
 const descuento = 0.15
 
-const productosFebrero = listaProductos.map(producto =>{
+const productosFebrero = listaProductos.map((producto) =>{
     if(producto.precio < 12000){
         return{
             id: producto.id,
@@ -152,10 +153,11 @@ const productosFebrero = listaProductos.map(producto =>{
             precio:  Math.round(producto.precio *(1- descuento)),
             img: producto.img,
             cantidad: producto.cantidad,
-            categoria: producto.categoria
+            categoria: producto.categoria,
         }
     }else{
         return producto
     }
 });
+
 console.log(productosFebrero)
