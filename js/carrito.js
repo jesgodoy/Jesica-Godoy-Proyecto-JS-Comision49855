@@ -20,10 +20,10 @@ function abrirCarrito () {
                     <span class="cantidad">${producto.cantidad}</span>
                     <button class="boton-modal boton-sumar"><i class="fa-solid fa-plus" style="color: #c700b6;"></i></button>
                     </div>
-                    <div>$${producto.precio * producto.cantidad}</div>
+                    <div>$ ${producto.precio * producto.cantidad}</div>
                     <button class="boton-modal boton-eliminar"><i class=" fa-solid fa-trash-can" style="color: #c700b6;"></i></button>
                 </div>
-               
+                
                 
                `
 
@@ -32,7 +32,11 @@ function abrirCarrito () {
         contenidoModal += `
         <div>
         <h3>Total de tu compra es </h3>
-        <h3> ${totalCompra}</h3>
+        <h3>$ ${totalCompra}</h3>
+        </div>
+        <div class="footer-modal">
+            <button class="vaciar-carrito">Vaciar Carrito</button></div>
+            <div class="finalizar-compra"><a href="../pages/formulario.html">FinalizarCompra</a></div>
         </div>
         `
         
@@ -40,8 +44,7 @@ function abrirCarrito () {
             contenidoModal = `<h3>Tu carrito esta vacio</h3>`
         } 
 
-
-
+    
     Swal.fire({
         title:'Tu Carrito',
         width: 800,
@@ -49,6 +52,8 @@ function abrirCarrito () {
         showCloseButton:true,
         showConfirmButton:false,
         html: `<div id="main-modal">${contenidoModal}</div>`,
+        
+
     })
     //recorrer los botones para generar un evento
     const restar = document.querySelectorAll(".boton-restar")
@@ -65,12 +70,10 @@ function abrirCarrito () {
         elimina.addEventListener("click", eliminarProducto)
     })
     
+    const vaciar= document.querySelector(".vaciar-carrito")
+    vaciar.addEventListener("click", vaciarCarrito)
 
 }
-
-
-
-
 
 //cree las funciones para ver si funciona
 function restarCantidad(e){
@@ -106,6 +109,12 @@ function eliminarProducto(e){
     cargarCarrito()
 }
 
+function vaciarCarrito(){
+    carrito =[]
+    abrirCarrito()
+    guardarCarrito()
+    carrito()
+}
 document.addEventListener('DOMContentLoaded', ()=>{
     cargarCarrito()
 })

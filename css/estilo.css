@@ -25,12 +25,11 @@ li{
   transition: all 0.2s ease-in-out;
 }
 .botones-filtro:hover {
-    background-color: ;
+    background-color: black;
+    color: palevioletred;
   }
   
-.botones-filtro:active {
-    background-color: #eb0101f2;
-  }
+
 .contenedor-productos{
     display: grid;
     grid-template-columns: repeat(4,1fr);
@@ -39,7 +38,7 @@ li{
 
 .card-img-top{
     
-    height: 50vh;
+    height: 35vh;
 }
 .img-body{
     background-color: rgb(240, 185, 118);
@@ -56,7 +55,7 @@ li{
 }
 
 .imagen-producto-carrito{
-    width: 25%;
+    width: 30%;
 }
 .boton-modal{
     background-color: rgb(240, 185, 118);
@@ -66,3 +65,28 @@ li{
     padding: 5px;
 }
 
+.vaciarcarrito{
+    background-color: red;
+}
+.div-index{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 2rem;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.titulo{
+    text-align: center;
+    margin: 10px;
+}
+.parrafo{
+    text-align: center;
+    font: 1.5em sans-serif;
+    padding: 10px;
+}
+.card-comentarios{
+    background-color: aqua;
+}
+.card-empleados{
+    background-color: rosybrown;
+}
