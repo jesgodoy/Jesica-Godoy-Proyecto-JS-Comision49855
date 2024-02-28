@@ -3,7 +3,7 @@ const productos = [
         id: 1,
         nombre: "Brownie Clasico", 
         precio: 10000,
-        img: "../assets/imagenes/productos/brownie-clasico.jpg",
+        img: "./assets/imagenes/productos/brownie-clasico.jpg",
         cantidad: 1,
         categoria: "brownie",
         seccion: "general"
@@ -12,7 +12,7 @@ const productos = [
         id: 2,
         nombre: "Brownie Frambuesa", 
         precio: 14000,
-        img: "../assets/imagenes/productos/brownie-frutilla.jpg",
+        img: "./assets/imagenes/productos/brownie-frutilla.jpg",
         cantidad: 1,
         categoria: "brownie",
         seccion: "general"
@@ -21,7 +21,7 @@ const productos = [
         id: 3,
         nombre: "Brownie Mix Frutos ",      
         precio: 15000,
-        img: "../assets/imagenes/productos/brownie-frutosrojos.jpg",
+        img: "./assets/imagenes/productos/brownie-frutosrojos.jpg",
         cantidad: 1,
         categoria: "brownie",
         seccion: "general"
@@ -30,7 +30,7 @@ const productos = [
         id: 4,
         nombre: "Brownie Moka", 
         precio: 11000,
-        img: "../assets/imagenes/productos/brownie-moka.jpg",
+        img: "./assets/imagenes/productos/brownie-moka.jpg",
         cantidad: 1,
         categoria: "brownie",
         seccion: "general"
@@ -39,7 +39,7 @@ const productos = [
         id: 5,
         nombre: "Brownie Oreo", 
         precio: 15000,
-        img: "../assets/imagenes/productos/brownie-oreo.jpg",
+        img: "./assets/imagenes/productos/brownie-oreo.jpg",
         cantidad: 1,
         categoria: "brownie",
         seccion: "general"

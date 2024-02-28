@@ -15,7 +15,7 @@ function cargarProducto(filtro){
     
     <div class="card">
         <div class="img-body container pt-3">
-        <img src="${producto.img}" class="card-img-top">
+        <img src="../${producto.img}" class="card-img-top">
         </div>
         <div class="card-body">
             <h4 class="card-title text-center">${producto.nombre}</h4>
