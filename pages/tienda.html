@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../css/estilo.css">
 </head>
 <body>
-    <header class="header container">
+    <header class="header container-fluid">
         <div class="row">
             <div class="col-11">
                 <nav class="navbar navbar-expand-lg ">
@@ -41,7 +41,7 @@
        
     </header>
       
-    <main class="main">
+    <main class="main mb-5">
         <div class="container" id="contenedor-filtros">
             <nav id="filtro" class="text-center">
                 <ul>
@@ -68,11 +68,32 @@
             
             </div>
         </div>
-        
-        
     </main>
-    <footer>
-        
+    <footer class="footer container-fluid ">
+        <div class="row">
+            <div class="col-4 ">
+                <a href="../index.html"><img class="logo mt-5" src="../assets/imagenes/logo.png" alt="logo"></a>
+            </div>
+            <div class="col-5">
+                <h2>Conocenos</h2>
+                <h3><a href="../index.html">Inicio</a></h3>
+                <h3><a href="./tienda.html">Productos</a></h3>
+                
+                
+                
+            </div>
+            <div class="col-3">
+                <h2 class="text-center" >Nuestras Redes</h2>
+                <div>
+                    <ul class=" d-flex justify-content-evenly  link-footer">
+                        <li class="fs-3"><a  href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook fa-2xl" style="color: #b30071;"></i></a></li>
+                        <li class="fs-3"><a href="https://twitter.com/" target="_blank"><i class="fa-brands fa-twitter fa-2xl" style="color: #b30071;"></i></a></li>
+                        <li class="fs-3"><a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-square-instagram fa-2xl" style="color: #b30071;"></i></a></li>
+                     </ul>
+                </div>
+                
+            </div>
+        </div>
         
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>

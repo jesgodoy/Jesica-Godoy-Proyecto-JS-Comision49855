@@ -8,20 +8,72 @@
     <link rel="stylesheet" href="../css/estilo.css">
 </head>
 <body>
-    <header>
-
-    </header>
+  <header class="header container-fluid">
+    <div class="row">
+        <div class="col-11">
+            <nav class="navbar navbar-expand-lg ">
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="../index.html"><img class="logo" src="../assets/imagenes/logo.png" alt="logo"></a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                      <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="../index.html">Inicio</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="tienda.html">Productos</a>
+                      </li>
+                      
+                  </div>
+                </div>
+            </nav>
+        </div>
+        <div class="col-1">
+            <div class="mt-4" id="icono-carrito">
+                
+                <i class="fa-solid fa-cart-shopping fa-2xl" style="color: #b30071;"></i>         
+            </div>
+        </div>
+    </div>
+   
+</header>
+  
     <main>
-        <div id="formulario-compra" class="container">
-            <form action="">
-                
-                
-            </form>
+        <div id="contenedor-formulario-compra" class="container">
         </div>
     </main>
-    <footer>
+    <footer class="footer container-fluid ">
+      <div class="row">
+          <div class="col-4 ">
+              <a href="../index.html"><img class="logo mt-5" src="../assets/imagenes/logo.png" alt="logo"></a>
+          </div>
+          <div class="col-5">
+              <h2>Conocenos</h2>
+              <h3><a href="../index.html">Inicio</a></h3>
+              <h3><a href="./tienda.html">Productos</a></h3>
+              
+              
+              
+          </div>
+          <div class="col-3">
+              <h2 class="text-center" >Nuestras Redes</h2>
+              <div>
+                  <ul class=" d-flex justify-content-evenly  link-footer">
+                      <li class="fs-3"><a  href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook fa-2xl" style="color: #b30071;"></i></a></li>
+                      <li class="fs-3"><a href="https://twitter.com/" target="_blank"><i class="fa-brands fa-twitter fa-2xl" style="color: #b30071;"></i></a></li>
+                      <li class="fs-3"><a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-square-instagram fa-2xl" style="color: #b30071;"></i></a></li>
+                   </ul>
+              </div>
+              
+          </div>
+      </div>
+      
+  </footer>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+   
 
-    </footer>
     <script src="../js/formulario.js"></script>
 </body>
 </html>

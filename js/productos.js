@@ -158,6 +158,12 @@ let  productoSanValentin = [sanValentin1, sanValentin2, sanValentin3, sanValenti
 // combino los 2 array creados
 const listaProductos = productos.concat(productoSanValentin);
 
+ 
+let listaProductosJSON = JSON.stringify(listaProductos)
+localStorage.setItem("datos", listaProductosJSON )
+
+
+
 //  creo una copia de array original "listadeproductos" para hacer descuento para productos < $12000 
 const descuento = 0.15
 
@@ -177,4 +183,4 @@ const productosFebrero = listaProductos.map((producto) =>{
     }
 });
 
-console.log(productosFebrero)
+
