@@ -13,7 +13,7 @@ function abrirCarrito () {
                 
                     <div>${producto.nombre}</div>
                     <div>
-                    <img class="imagen-producto-carrito" src="${producto.img}" alt="${producto.nombre}">
+                    <img class="imagen-producto-carrito" src="../${producto.img}" alt="${producto.nombre}">
                     </div>
                     <div>
                     <button class="boton-modal boton-restar"><i class="fas fa-minus" style="color: #c700b6;"></i></button>
